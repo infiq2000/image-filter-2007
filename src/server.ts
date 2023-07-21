@@ -33,7 +33,7 @@ import { filterImageFromURL, deleteLocalFiles } from "./util/util";
   // Root Endpoint
   // Displays a simple message to the user
   app.get("/filteredimage", async (request: Request, response: Response) => {
-    const { image_url }: { image_url: string } = request.query;
+    const image_url = request.query.mage_url.toString();
 
     if (image_url) {
       try {
